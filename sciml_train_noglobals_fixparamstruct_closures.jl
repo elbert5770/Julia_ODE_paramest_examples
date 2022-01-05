@@ -1,14 +1,10 @@
 using Plots
 using DifferentialEquations
 using DataInterpolations
-using DiffEqFlux, OrdinaryDiffEq, Flux
-using DiffEqSensitivity
-using Zygote
-using ForwardDiff
-using ModelingToolkit
-using GalacticOptim
-using Profile
+using DiffEqFlux
 using BenchmarkTools
+using ForwardDiff
+using Zygote
 
 function ODE_FF_eqtns_outer(fixed_params,interp_linear)
 	function ODE_FF_eqtns_inner(du,u,p,t)
